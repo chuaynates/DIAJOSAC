@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Paul Frank Pacheco Carpio  ">
 
-    <title>Marcas - DIAJO SAC</title>
+    <title>Nuestros Productos - DIAJO SAC</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,9 +23,7 @@
     <link href="/css/creative.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/estilos.css">
 </head>
-
-<body id="page-top">
-
+<body>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
@@ -63,42 +61,16 @@
         </div>
     </div>
 </nav>
-<header class="container-fluid text-white text-center marcas">
-    <div class="container my-auto">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <h1 class="text-uppercase">
-                    <strong class="marcastittle">Nuestras marcas afiliadas</strong>
-                    <label style="color: transparent">{{date_default_timezone_set("America/Lima")}}</label>
-                </h1>
-            </div>
-        </div>
-    </div>
-</header>
-
-<div class="container-fluid text-center ">
-    <div class="row">
-        @foreach($marcas as $marca)
-            <div class="col-md-6 col-lg-3 mb-3">
-
-                    <div class="card bg-light mb-3 card-d h-80">
-                        <a class="marca-title" href="/productos/marcas/{{$marca->codigo}}">
-                        <img class="card-img-top resize-card" src="img/marcas/{{$marca->imagen}}">
-                        <div class="card-title titlecard">{{$marca->nombre}}</div>
-                        <div class="card-body">
-                        <!--<div class="card-text">{{$marca->introduccion}}</div>-->
-                        </div>
-                    </div>
-                </a>
-            </div>
-        @endforeach
-    </div>
-</div>
 <footer class="text-center">DIAJO S.A.C. {{date('Y')}}</footer>
 <!-- Bootstrap core JavaScript -->
 <script src="/vendors/jquery/jquery.min.js"></script>
 <script src="/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+<script>
+    $('#form').submit(function () {
+        var buscar=$('#busca').val();
+        $(this).attr('action',"/productos/buscar/"+buscar);
+    });
+</script>
 <!-- Plugin JavaScript -->
 <script src="/vendors/jquery-easing/jquery.easing.min.js"></script>
 <script src="/vendors/scrollreveal/scrollreveal.min.js"></script>
@@ -106,5 +78,12 @@
 
 <!-- Custom scripts for this template -->
 <script src="/js/creative.js"></script>
+
+<script src="/js/responsive-paginate.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".pagination").rPage();
+    });
+</script>
 </body>
 </html>
