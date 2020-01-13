@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Paul Frank Pacheco Carpio  ">
-
+    <link rel="shortcut icon" href="/img/logod.ico">  
     <title>Nuevo producto - DIAJO SAC</title>
     {{--Añadir icono de diajo sac acanga--}}
     <link rel="shortcut icon" type="image" href="/log   o.jpg">

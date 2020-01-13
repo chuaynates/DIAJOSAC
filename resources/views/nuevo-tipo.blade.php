@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Paul Frank Pacheco Carpio  ">
-
+    <link rel="shortcut icon" href="/img/logod.ico">  
     <title>Nuevo Tipo de producto - DIAJO SAC</title>
 
     <!-- Bootstrap core CSS -->

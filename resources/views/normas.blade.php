@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Paul Frank Pacheco Carpio  ">
-
+    <link rel="shortcut icon" href="/img/logod.ico">  
     <title>Normas - DIAJO SAC</title>
 
     <!-- Bootstrap core CSS -->
@@ -68,7 +68,7 @@
         <div class="row">
             <div class="col-lg-10 mx-auto">
                 <h1 class="text-uppercase">
-                    <strong>Normativas sobre Equipos de Protección Personal</strong>
+                    <strong class="normastittle">Normativas sobre Equipos de Protección Personal</strong>
                     <label style="color: transparent">{{date_default_timezone_set("America/Lima")}}</label>
                 </h1>
             </div>

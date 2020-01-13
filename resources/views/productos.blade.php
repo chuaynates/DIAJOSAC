@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Paul Frank Pacheco Carpio  ">
-
+    <link rel="shortcut icon" href="/img/logod.ico">  
     <title>Nuestros Productos - DIAJO SAC</title>
 
     <!-- Bootstrap core CSS -->
@@ -65,7 +65,7 @@
     <div class="container my-auto">
         <div class="row">
             <div class="col-lg-10 mx-auto">
-                <h1 class="text-uppercase">
+                <h1 class="text-uppercase h1pro" >
                     <strong>Nuestros mejores productos <br>a su alcance</strong>
                     <label style="color: transparent">{{date_default_timezone_set("America/Lima")}}</label>
                 </h1>
@@ -77,15 +77,21 @@
 <div class="container-fluid">
     <div class="row lista-tipo">
         <div class="col-lg-3 mb-3">
-            <h4 class="my-4">Tipos de productos</h4>
-            <a class="list-item marca-title" href="{{url("/productos")}}">Mostrar todo</a>
+            <div class="marquer">
+            <h4 class="my-4 tipospro text-white sombra ">Tipos de productos</h4></div>
+            
             <div class="list-group">
+                
                 @foreach($tipo as $tipos)
                     <a class="list-group-item marca-title size-list" href="{{url("/productos/tipos/$tipos->codigo")}}">{{$tipos->nombre}}</a>
             @endforeach
             </div>
-            <br>
-            <h4>Marcas</h4>
+            <div style="text-align: center;border-style: solid;">
+            <a class="marca-title todo" href="{{url("/productos")}}">Mostrar todo</a>
+        </div>
+            <br><div class="marquera">
+            <h4 class="text-white sombra">Marcas</h4>
+        </div>
             <div class="list-group">
                 @foreach($marca as $marcas)
                     <a class="list-group-item marca-title size-list" href="{{url("/productos/marcas/$marcas->codigo")}}">{{$marcas->nombre}}</a>
@@ -96,7 +102,7 @@
             <h4 class="my-4 ml-2">Resultados: {{$resultados}} de {{$total}}</h4>
             <form id="form" method="post" action="">
                 <div id="searchbar" class="input-group col-md-4 pl-2">
-                    <input class="form-control rounded" type="search" placeholder="buscar producto" name="busca" id="busca">
+                    <input class="form-control rounded" type="search" placeholder="Buscar producto" name="busca" id="busca">
                     <span class="input-group-btn">
                     <button class="btn btn-outline-secondary" type="submit">
                     <i class="fa fa-search"></i>
@@ -113,7 +119,7 @@
                             <img class="card-img-top resize-card" src="/images/{{$productos->imagen}}">
                             <div class="card-title titlecard">{{$productos->nombre}}</div>
                             <div class="card-body">
-                                <p>{{$productos->marca->nombre}}</p>
+                                <p>Marca: {{$productos->marca->nombre}}</p>
                                 <div class="card-text"></div>
                             </div>
                             </a>
